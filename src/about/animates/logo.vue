@@ -30,12 +30,12 @@ export default {
         animate('#background', {
             autoplay: onScroll({
                 enter: `center bottom-=${n * 0.25}`,
-                leave: `top-=${n * 5} top`,
+                leave: `top-=${n * 25} top`,
                 sync: true,
                 // debug: true
                 onUpdate: (e) => {
                     $('#background').css({
-                        background: `linear-gradient(${((700 - 20) * e.progress) + 20}deg, green, #AAAA00)`,
+                        background: `linear-gradient(${((3420 - 20) * e.progress) + 20}deg, green, #AAAA00)`,
                     })
                 }
             })
