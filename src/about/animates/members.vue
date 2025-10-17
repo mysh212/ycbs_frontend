@@ -33,21 +33,23 @@
                                 </div>
                             </template>
 
-                            <v-row justify = center :prepend-avator = '`members/photo/{i.username}.jpg`' >
+                            <v-row justify = center>
                                 <v-col cols = 12 md = 6 lg = 4>
                                     <v-card class = 'text-center align-content-center'>
                                         <template #title>
                                             {{ i.name }}
                                         </template>
                                         <template #subtitle>
-                                            <b> {{ i.school }} </b>
-                                            <b> {{ i.major }} </b>
+                                            <b> {{ i.school }} </b>&nbsp;
+                                            <b> {{ i.major }} </b>&nbsp;
                                             <b> {{ i.grade }} 年級生 </b>
                                         </template>
                                         <template #text>
                                             {{ i.introduction }}
                                         </template>
                                     </v-card>
+                                    <v-divider class = ma-3 />
+                                    <v-card :title = 'i.group' :subtitle = 'i.role' prepend-icon = 'fa-solid fa-building' />
                                 </v-col>
                             </v-row>
                         </v-dialog>
