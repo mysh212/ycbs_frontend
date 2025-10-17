@@ -2,6 +2,7 @@
     <v-card class = 'bs' id = background align = center justify = middle min-height="100vh">
         <v-img src = 'Logo/logo.png' id = logo max-height = 100vh max-width = '100vw' />
     </v-card>
+    <!-- <v-card title = 網站建置中... variant = plain /> -->
     <div class = bs>
         <v-card id = zero color = transparent>
             <v-row justify = center class = align-content-center id = showcase>
@@ -9,21 +10,23 @@
                     <v-col>
                         <v-hover>
                             <template #default = '{isHovering, props}'>
-                                <v-card
-                                    class = 'ma-3 text-center align-content-center'
-                                    v-bind = props
-                                    v-ripple
-                                    
-                                    :style = '$vuetify.display.mdAndUp ? `height: 50vh` : `height: 30vh`'
-                                    :variant = '!isHovering ? `tonal` : undefined'
-                                    :color = 'isHovering ? `primary` : undefined'
-                                >
-                                    <template #title>
-                                        <v-icon> fa-solid fa-{{ i.icon }} </v-icon>
-                                        <br>
-                                        <b> {{ i.name }} </b>
-                                    </template>
-                                </v-card>
+                                <a :href = '`${i.href}.html`'>
+                                    <v-card
+                                        class = 'ma-3 text-center align-content-center'
+                                        v-bind = props
+                                        v-ripple
+                                        
+                                        :style = '$vuetify.display.mdAndUp ? `height: 50vh` : `height: 30vh`'
+                                        :variant = '!isHovering ? `tonal` : undefined'
+                                        :color = 'isHovering ? `primary` : undefined'
+                                    >
+                                        <template #title>
+                                            <v-icon> fa-solid fa-{{ i.icon }} </v-icon>
+                                            <br>
+                                            <b> {{ i.name }} </b>
+                                        </template>
+                                    </v-card>
+                                </a>
                             </template>
                         </v-hover>
                     </v-col>
