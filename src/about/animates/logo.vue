@@ -35,7 +35,7 @@ export default {
                 // debug: true
                 onUpdate: (e) => {
                     $('#background').css({
-                        background: `linear-gradient(${((3420 - 20) * e.progress) + 20}deg, green, #AAAA00)`,
+                        background: `linear-gradient(${(((3420 - 20) * e.progress) % 360) + 20}deg, green, #AAAA00)`,
                     })
                 }
             })
