@@ -1,6 +1,16 @@
 <template>
-    <div class = 'place_holder_two'>
+    <div class = 'place_holder'>
         <logo />
+    </div>
+    <countdown />
+    <!-- <div class = 'place_holder'>
+    </div> -->
+    
+    <div class = 'place_holder'>
+        <core />
+    </div>
+    <div class = 'place_holder'>
+        <showcase />
     </div>
 </template>
 
@@ -10,11 +20,17 @@ import $ from 'jquery'
 import { animate, stagger, onScroll, text } from 'animejs';
 
 import logo from '@/index/animates/logo.vue';
+import countdown from '@/index/animates/countdown.vue';
+import showcase from '@/index/animates/showcase.vue';
+import core from '@/index/animates/core.vue';
 
 export default {   
     name: 'home_wallpaper',
     components: {
-        logo
+        logo,
+        countdown,
+        showcase,
+        core
     },
     mounted() {
         M.AutoInit();

@@ -15,11 +15,6 @@ export default {
     name: 'legs',
     data() {
         return {
-            links: [
-                {name: '關於我們', icon: 'people-group', href: 'about'},
-                {name: '歷年活動', icon: 'timeline', href: 'old'},
-                {name: '現在報名', icon: 'bolt', href: 'register'}
-            ]
         }
     },
     mounted() {
@@ -29,13 +24,13 @@ export default {
         var now = window.scrollY;
         animate('#background', {
             autoplay: onScroll({
-                enter: `center bottom-=${n * 0.25}`,
+                enter: `center top`,
                 leave: `top-=${n * 25} top`,
                 sync: true,
                 // debug: true
                 onUpdate: (e) => {
                     $('#background').css({
-                        background: `linear-gradient(${(((3420 - 20) * e.progress) % 360) + 20}deg, green, #AAAA00)`,
+                        background: `linear-gradient(${(((3420 - 20) * e.progress) % 360) + 20}deg, pink, #00AAAA)`,
                     })
                 }
             })
@@ -46,17 +41,6 @@ export default {
                 enter: `center bottom-=${n >> 2}`,
                 leave: `top-=${n} top`,
                 sync: true
-            })
-        })
-        animate('#showcase', {
-            x: '10rem',
-            opacity: 0,
-            reversed: true,
-            autoplay: onScroll({
-                enter: 'center center',
-                leave: 'top center',
-                sync: true,
-                // debug: true
             })
         })
     },
@@ -87,7 +71,7 @@ export default {
     z-index: -1;
     position: fixed;
     display: flex;
-    background: linear-gradient(20deg, green, #AAAA00);
+    background: linear-gradient(20deg, pink, #00AAAA);
 }
 #zero {
     justify-content: center;
