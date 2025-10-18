@@ -12,7 +12,7 @@
                                         v-bind = props
                                         v-ripple
                                         
-                                        :style = '$vuetify.display.mdAndUp ? `height: 50vh` : `height: 30vh`'
+                                        :style = '$vuetify.display.mdAndUp ? `height: 50vh` : `height: 40vh`'
                                         :variant = '!isHovering ? `tonal` : undefined'
                                         :color = 'isHovering ? `primary` : undefined'
                                     >
@@ -43,7 +43,7 @@ export default {
         return {
             links: [
                 {name: '關於我們', icon: 'people-group', href: 'about'},
-                {name: '歷年活動', icon: 'timeline', href: 'old'},
+                // {name: '歷年活動', icon: 'timeline', href: 'old'},
                 {name: '現在報名', icon: 'bolt', href: 'https://forms.gle/4gZzUWVFvyVikF9k9'}
             ]
         }
