@@ -42,7 +42,7 @@ export default {
     data() {
         return {
             links: [
-                {name: '關於我們', icon: 'people-group', href: 'about'},
+                {name: '成員介紹', icon: 'people-group', href: 'about'},
                 // {name: '歷年活動', icon: 'timeline', href: 'old'},
                 {name: '現在報名', icon: 'bolt', href: 'https://forms.gle/4gZzUWVFvyVikF9k9'}
             ]
