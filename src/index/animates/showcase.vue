@@ -44,7 +44,7 @@ export default {
             links: [
                 {name: '成員介紹', icon: 'people-group', href: 'about'},
                 // {name: '歷年活動', icon: 'timeline', href: 'old'},
-                {name: '現在報名', icon: 'bolt', href: 'https://forms.gle/4gZzUWVFvyVikF9k9'}
+                {name: '立即報名', icon: 'bolt', href: 'https://forms.gle/4gZzUWVFvyVikF9k9'}
             ]
         }
     },
