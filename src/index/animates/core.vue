@@ -1,6 +1,6 @@
 <template>
     <div class = 'bs align-content-center'>
-        <v-card id = three color = transparent class = align-content-center>
+        <v-card id = three color = transparent class = align-content-center variant = flat>
             <v-row justify = center class = align-content-center>
                 <v-row justify = center>
                     <v-col col = 12 md = 6 lg = 4>
@@ -57,6 +57,6 @@ export default {
 }
 #three {
     height: 100vh;
-    backdrop-filter: blur(40px);
+    /* backdrop-filter: blur(40px); */
 }
 </style>

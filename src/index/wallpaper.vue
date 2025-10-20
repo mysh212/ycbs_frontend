@@ -5,12 +5,13 @@
     <countdown />
     <!-- <div class = 'place_holder'>
     </div> -->
-    
-    <div class = 'place_holder'>
-        <core />
-    </div>
-    <div class = 'place_holder'>
-        <showcase />
+    <div class = br>
+        <div class = 'place_holder'>
+            <core />
+        </div>
+        <div class = 'place_holder'>
+            <showcase />
+        </div>
     </div>
 </template>
 
@@ -41,6 +42,9 @@ export default {
 </script>
 
 <style scoped>
+.br {
+    backdrop-filter: blur(50px);
+}
 .place_holder {
     position: relative;
     height: 200vh;

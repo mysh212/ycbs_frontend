@@ -1,6 +1,6 @@
 <template>
     <div class = bs>
-        <v-card id = two color = transparent>
+        <v-card id = two color = transparent variant = text>
             <v-row justify = center class = align-content-center id = showcase>
                 <template v-for = 'i in links' :key = i>
                     <v-col cols = 12 md = 4>
@@ -116,9 +116,6 @@ export default {
     left: 70vw;
     width: 100px;
     z-index: 1;
-}
-#two {
-    backdrop-filter: blur(40px);
 }
 #showcase {
     height: 100vh;

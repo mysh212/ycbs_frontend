@@ -4,6 +4,14 @@
             <v-img src = 'Logo/logo.png' id = logo max-height = 100vh max-width = '100vw' />
         </template>
     </v-card>
+    <div class = bs>
+        <v-card id = zero color = transparent class = 'align-content-center text-center' variant = text>
+                <div id = slide-to-show style = 'opacity: 0' class = text-white>
+                    <v-icon> fa-solid fa-up-long fa-beat-fade </v-icon><br>
+                    <b> 成員介紹 </b>
+                </div>
+        </v-card>
+    </div>
 </template>
 
 <script>
@@ -35,12 +43,15 @@ export default {
                 }
             })
         })
-        animate('#zero', {
-            'backdrop-filter': 'blur(20px)',
+        animate('#slide-to-show', {
+            y: '40vh',
+            opacity: 1,
+            reversed: true,
             autoplay: onScroll({
-                enter: `center bottom-=${n >> 2}`,
-                leave: `top-=${n} top`,
-                sync: true
+                enter: 'center center',
+                leave: 'top center',
+                sync: true,
+                onUpdate: (e) => this.now = e.progress
             })
         })
     },

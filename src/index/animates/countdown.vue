@@ -10,6 +10,7 @@
                     <v-col cols = 6 md = 3><v-card class = text-center variant = tonal color = white :title = countdown.hours text = 時 /></v-col>
                     <v-col cols = 6 md = 3><v-card class = text-center variant = tonal color = white :title = countdown.minutes text = 分 /></v-col>
                     <v-col cols = 6 md = 3><v-card class = text-center variant = tonal color = white :title = countdown.seconds text = 秒 /></v-col>
+                    <!-- <v-col cols = 6 md = 3><v-card class = text-center variant = tonal color = white :title = countdown.ms text = 毫秒 /></v-col> -->
                 </v-row>
                 <v-row justify = center>
                     <v-col cols = 12 md = 6>
@@ -60,14 +61,6 @@ export default {
         var n = window.innerHeight;
         var m = window.innerWidth;
         var now = window.scrollY;
-        animate('#one', {
-            'backdrop-filter': 'blur(40px)',
-            autoplay: onScroll({
-                enter: `bottom top`,
-                leave: `center top`,
-                sync: true
-            })
-        })
         animate('#register_now', {
             scale: [
                 {to: 1.1, duration: 1000},
@@ -78,11 +71,12 @@ export default {
         })
         setInterval(() => {
             this.update_timer();
-        }, 1000);
+        }, 100);
     },
     methods: {
         update_timer() {
             this.countdown.all = (1761926400 * 1000 - Date.now()) / 1000;
+            this.countdown.ms = (1761926400 * 1000 - Date.now()) % 1000;
             this.countdown.seconds = Math.floor(this.countdown.all % 60);
             this.countdown.minutes = Math.floor((this.countdown.all / 60) % 60);
             this.countdown.hours = Math.floor((this.countdown.all / 60 / 60) % 24);
@@ -101,34 +95,10 @@ export default {
     /* z-index: -1; */
     /* backdrop-filter: blur(10px); */
 }
-.ct {
-    /* position: absolute; */
-    top: 50%;
-    width: 100vw;
-    /* text-align: center; */
-}
-#legs {
-    filter: blur(50px);
-}
 #background {
     z-index: -1;
     position: fixed;
     display: flex;
     background: linear-gradient(20deg, #00FFFF, purple);
-}
-#zero {
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-#cute {
-    position: fixed;
-    top: 40vh;
-    left: 70vw;
-    width: 100px;
-    z-index: 1;
-}
-#showcase {
-    height: 100vh;
 }
 </style>
