@@ -1,17 +1,17 @@
 <template>
     <div class = bs>
-        <v-row justify = center align = end style = 'height: 100vh'>
+        <v-row justify = center align = center style = 'height: 100vh'>
             <v-col cols = 12 md = 8>
                 <v-card variant = text class = 'text-center' color = white id = one>
                     <template #title>
-                        <b style = 'font-size: 30px'> YCBS 早鳥優惠 報名倒數 </b>
+                        <b class = 'text-black' style = 'font-size: 30px'> YCBS 早鳥優惠 報名倒數 </b>
                     </template>
                     <v-row>
-                        <v-col cols = 6 md = 3><v-card class = text-center variant = tonal color = white :title = countdown.days text = 天 /></v-col>
-                        <v-col cols = 6 md = 3><v-card class = text-center variant = tonal color = white :title = countdown.hours text = 時 /></v-col>
-                        <v-col cols = 6 md = 3><v-card class = text-center variant = tonal color = white :title = countdown.minutes text = 分 /></v-col>
-                        <v-col cols = 6 md = 3><v-card class = text-center variant = tonal color = white :title = countdown.seconds text = 秒 /></v-col>
-                        <!-- <v-col cols = 6 md = 3><v-card class = text-center variant = tonal color = white :title = countdown.ms text = 毫秒 /></v-col> -->
+                        <v-col cols = 6 md = 3><v-card class = text-center variant = tonal color = black :title = countdown.days text = 天 /></v-col>
+                        <v-col cols = 6 md = 3><v-card class = text-center variant = tonal color = black :title = countdown.hours text = 時 /></v-col>
+                        <v-col cols = 6 md = 3><v-card class = text-center variant = tonal color = black :title = countdown.minutes text = 分 /></v-col>
+                        <v-col cols = 6 md = 3><v-card class = text-center variant = tonal color = black :title = countdown.seconds text = 秒 /></v-col>
+                        <!-- <v-col cols = 6 md = 3><v-card class = text-center variant = tonal color = black :title = countdown.ms text = 毫秒 /></v-col> -->
                     </v-row>
                     <v-row justify = center>
                         <v-col cols = 12 md = 6>
