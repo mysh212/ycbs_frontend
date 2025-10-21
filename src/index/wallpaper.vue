@@ -2,7 +2,9 @@
     <div class = 'place_holder'>
         <logo />
     </div>
-    <countdown />
+    <div class = 'place_holder'>
+        <countdown />
+    </div>
     <!-- <div class = 'place_holder'>
     </div> -->
     <div class = br>

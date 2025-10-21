@@ -1,36 +1,38 @@
 <template>
-    <v-row justify = center align = end style = 'height: 100vh'>
-        <v-col cols = 12 md = 8>
-            <v-card variant = text class = 'text-center' color = white id = one>
-                <template #title>
-                    <b style = 'font-size: 30px'> YCBS 早鳥優惠 報名倒數 </b>
-                </template>
-                <v-row>
-                    <v-col cols = 6 md = 3><v-card class = text-center variant = tonal color = white :title = countdown.days text = 天 /></v-col>
-                    <v-col cols = 6 md = 3><v-card class = text-center variant = tonal color = white :title = countdown.hours text = 時 /></v-col>
-                    <v-col cols = 6 md = 3><v-card class = text-center variant = tonal color = white :title = countdown.minutes text = 分 /></v-col>
-                    <v-col cols = 6 md = 3><v-card class = text-center variant = tonal color = white :title = countdown.seconds text = 秒 /></v-col>
-                    <!-- <v-col cols = 6 md = 3><v-card class = text-center variant = tonal color = white :title = countdown.ms text = 毫秒 /></v-col> -->
-                </v-row>
-                <v-row justify = center>
-                    <v-col cols = 12 md = 6>
-                        <v-hover>
-                            <template #default = '{isHovering, props}'>
-                                <a href = 'https://forms.gle/4gZzUWVFvyVikF9k9'>
-                                    <v-card variant = tonal rounded = pill v-bind = props :color = 'isHovering ? `primary` : undefined' id = register_now v-ripple>
-                                        <template #title>
-                                            <v-icon> fa-solid fa-bolt </v-icon>
-                                            <b> 立即報名 </b>
-                                        </template>
-                                    </v-card>
-                                </a>
-                            </template>
-                        </v-hover>
-                    </v-col>
-                </v-row>
-            </v-card>
-        </v-col>
-    </v-row>
+    <div class = bs>
+        <v-row justify = center align = end style = 'height: 100vh'>
+            <v-col cols = 12 md = 8>
+                <v-card variant = text class = 'text-center' color = white id = one>
+                    <template #title>
+                        <b style = 'font-size: 30px'> YCBS 早鳥優惠 報名倒數 </b>
+                    </template>
+                    <v-row>
+                        <v-col cols = 6 md = 3><v-card class = text-center variant = tonal color = white :title = countdown.days text = 天 /></v-col>
+                        <v-col cols = 6 md = 3><v-card class = text-center variant = tonal color = white :title = countdown.hours text = 時 /></v-col>
+                        <v-col cols = 6 md = 3><v-card class = text-center variant = tonal color = white :title = countdown.minutes text = 分 /></v-col>
+                        <v-col cols = 6 md = 3><v-card class = text-center variant = tonal color = white :title = countdown.seconds text = 秒 /></v-col>
+                        <!-- <v-col cols = 6 md = 3><v-card class = text-center variant = tonal color = white :title = countdown.ms text = 毫秒 /></v-col> -->
+                    </v-row>
+                    <v-row justify = center>
+                        <v-col cols = 12 md = 6>
+                            <v-hover>
+                                <template #default = '{isHovering, props}'>
+                                    <a href = 'https://forms.gle/4gZzUWVFvyVikF9k9'>
+                                        <v-card variant = tonal rounded = pill v-bind = props :color = 'isHovering ? `primary` : undefined' id = register_now v-ripple>
+                                            <template #title>
+                                                <v-icon> fa-solid fa-bolt </v-icon>
+                                                <b> 立即報名 </b>
+                                            </template>
+                                        </v-card>
+                                    </a>
+                                </template>
+                            </v-hover>
+                        </v-col>
+                    </v-row>
+                </v-card>
+            </v-col>
+        </v-row>
+    </div>
 </template>
 
 <script>
@@ -64,7 +66,7 @@ export default {
         animate('#register_now', {
             scale: [
                 {to: 1.1, duration: 1000},
-                {to: 1, diration: 1000}
+                {to: 1, duration: 1000}
             ],
             loop: true,
             loopDelay: 300
