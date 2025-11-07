@@ -7,8 +7,8 @@
                         <b> 營期 </b>
                     </template>
                     <v-row justify = center>
-                        <v-col cols = 6 md = 3><v-card variant = tonal title = 2026 text = 年 /></v-col>
-                        <v-col cols = 6 md = 3><v-card variant = tonal title = '1/28 - 1/30' text = 日 /></v-col>
+                        <!-- <v-col cols = 6 md = 3><v-card variant = tonal title = 2026 text = 年 /></v-col> -->
+                        <v-col cols = 12 md = 6><v-card variant = tonal title = '2026/1/28 - 1/30' text = 日 /></v-col>
                         <v-col cols = 12 md = 6>
                             <v-hover>
                                 <template #default = '{isHovering, props}'>
