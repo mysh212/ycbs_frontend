@@ -2,6 +2,23 @@
     <div class = bs>
         <v-row justify = center align = center style = 'height: 100vh'>
             <v-col cols = 12 md = 8>
+                <v-card class = text-center variant = text>
+                    <template #title>
+                        <b> 營期 </b>
+                    </template>
+                    <v-row justify = center>
+                        <v-col cols = 6 md = 3><v-card variant = tonal title = 2026 text = 年 /></v-col>
+                        <v-col cols = 6 md = 3><v-card variant = tonal title = '1/28 - 1/30' text = 日 /></v-col>
+                        <v-col cols = 12 md = 6>
+                            <v-hover>
+                                <template #default = '{isHovering, props}'>
+                                    <a href = 'event.html'><v-card title = 詳細資訊 v-bind = props :variant = 'isHovering ? undefined : `tonal`' :color = 'isHovering ? undefined : `primary`' append-icon = 'fa-solid fa-arrow-right' v-ripple></v-card></a>
+                                </template>
+                            </v-hover>
+                        </v-col>
+                    </v-row>
+                </v-card>
+                <v-divider />
                 <v-card variant = text class = 'text-center' color = white id = one>
                     <template #title>
                         <b class = 'text-black' style = 'font-size: 30px'> YCBS 報名倒數 </b>

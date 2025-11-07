@@ -97,6 +97,7 @@ a:hover { color: var(--color-primary-600); }
 .v-card--variant-elevated { box-shadow: var(--shadow-sm); }
 .v-btn { border-radius: 999px; font-weight: 700; }
 .v-application { background: transparent !important; }
+.v-card-title { font-weight: bold; }
 
 /* Utility */
 .text-muted { color: var(--color-muted) !important; }
