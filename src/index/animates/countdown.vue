@@ -4,7 +4,7 @@
             <v-col cols = 12 md = 8>
                 <v-card variant = text class = 'text-center' color = white id = one>
                     <template #title>
-                        <b class = 'text-black' style = 'font-size: 30px'> YCBS 早鳥優惠 報名倒數 </b>
+                        <b class = 'text-black' style = 'font-size: 30px'> YCBS 報名倒數 </b>
                     </template>
                     <v-row>
                         <v-col cols = 6 md = 3><v-card class = text-center variant = tonal color = black :title = countdown.days text = 天 /></v-col>
@@ -77,8 +77,9 @@ export default {
     },
     methods: {
         update_timer() {
-            this.countdown.all = (1761926400 * 1000 - Date.now()) / 1000;
-            this.countdown.ms = (1761926400 * 1000 - Date.now()) % 1000;
+            const DL = 1764518400;
+            this.countdown.all = (DL * 1000 - Date.now()) / 1000;
+            this.countdown.ms = (DL * 1000 - Date.now()) % 1000;
             this.countdown.seconds = Math.floor(this.countdown.all % 60);
             this.countdown.minutes = Math.floor((this.countdown.all / 60) % 60);
             this.countdown.hours = Math.floor((this.countdown.all / 60 / 60) % 24);
