@@ -9,8 +9,8 @@
                             <!-- <v-img src = Logo/logo.png /> -->
                         </template>
                         <template #append>
-                            <v-card v-if = '$vuetify.display.lgAndUp' color = green-darken-2 variant = tonal title = '國家生技園區' class = 'text-right' subtitle = 地點 append-icon = 'fa-solid fa-map' />
-                            <v-card v-if = '$vuetify.display.lgAndUp' color = cyan variant = tonal subtitle = 費用 title = '$3500 / 4000' class = 'ma-3' />
+                            <v-card v-if = '$vuetify.display.mdAndUp' color = green-darken-2 variant = tonal title = '國家生技園區' class = 'text-right' subtitle = 地點 append-icon = 'fa-solid fa-map' />
+                            <v-card v-if = '$vuetify.display.mdAndUp' color = cyan variant = tonal :subtitle = 'now > 0 ? `進度` : `費用`' :title = 'now > 0 ? `${Math.floor(this.now)}%` : `$3500 / 4000`' class = 'ma-3' />
                         </template>
                         <template #title>
                             4th 第四屆 
@@ -19,7 +19,7 @@
                             YCBS 國家生技研究園區 生技青年創業營
                         </template>
                         <template #text>
-                            <v-row v-if = '!$vuetify.display.lgAndUp'>
+                            <v-row v-if = '!$vuetify.display.mdAndUp'>
                                 <v-col v-for = 'i in data' :key = i cols = 12 md = 4>
                                     <v-card
                                         :prepend-icon = '`fa-solid ${i.icon}`'
