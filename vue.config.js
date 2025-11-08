@@ -7,6 +7,7 @@ module.exports = defineConfig({
     old: 'src/old/main.js',
     about: 'src/about/main.js',
     event: 'src/event/main.js',
-    register: 'src/register/main.js'
+    register: 'src/register/main.js',
+    progress: 'src/progress/main.js'
   }
 })
