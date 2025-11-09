@@ -13,18 +13,24 @@
                 <v-card
                     title = 回饋表
                     subtitle = 有甚麼想說的嗎
-                    class = glass
+                    class = 'glass ma-3'
 
                     v-ripple
                 />
-                <v-card class = glass>
+                <v-card class = 'glass ma-3' title = 修改紀錄 subtitle = changelog>
                     <template #text>
+                        <div class = 'd-flex justify-space-between'>
+                            <span><h4>目前進度</h4></span>
+                            <span><h4 class = right> {{ data.length }} % </h4></span>
+                        </div>
+                        <v-progress-linear model-value = 12 class = 'ma-3' />
+                        <v-divider class = ma-5 />
                         <v-row>
                             <v-col cols = 12 md = 4 v-for = 'i in data' :key = i>
                                 <v-hover>
                                     <template #default = '{isHovering, props}'>
-                                        <a :href = 'i.url'>
-                                            <v-card v-bind = props :color = 'isHovering ? `primary` : undefined' :subtitle = i.date :title = i.title :prepend-avatar = i.avatar>
+                                        <a :href = 'i.url' target = '_blank'>
+                                            <v-card v-bind = props :color = 'isHovering ? `primary` : undefined' :subtitle = '`${i.date} - ${i.name}`' :title = i.title :prepend-avatar = i.avatar>
                                                 <template #text>
                                                     <b v-html = i.message />
                                                 </template>
