@@ -21,7 +21,7 @@
                 <v-divider />
                 <v-card variant = text class = 'text-center' color = white id = one>
                     <template #title>
-                        <b class = 'text-black' style = 'font-size: 30px'> YCBS 報名倒數 </b>
+                        <b class = 'text-black' style = 'font-size: 30px'> YCBS 營隊倒數 </b>
                     </template>
                     <v-row>
                         <v-col cols = 6 md = 3><v-card class = text-center variant = tonal color = black :title = countdown.days text = 天 /></v-col>
@@ -94,7 +94,7 @@ export default {
     },
     methods: {
         update_timer() {
-            const DL = 1764518400;
+            const DL = 1769475600;
             this.countdown.all = (DL * 1000 - Date.now()) / 1000;
             this.countdown.ms = (DL * 1000 - Date.now()) % 1000;
             this.countdown.seconds = Math.floor(this.countdown.all % 60);
