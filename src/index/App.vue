@@ -202,6 +202,7 @@ a.unfocused, a.unfocused:visited, a.unfocused:hover, a.unfocused:active {
     height: 100vh;
     background-color: rgba(255, 255, 255, .9);
     backdrop-filter: blur(30px);
+    z-index: 100000;
 }
 /* .v-card-text * {
     font-size: 20px;
