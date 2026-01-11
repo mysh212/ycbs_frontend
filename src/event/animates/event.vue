@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-card id = event color = transparent>
+        <v-card id = event color = transparent variant = text>
             <v-row justify = center class = align-content-center>
                 <v-col cols = 12 md = 9>
                     <v-hover>

@@ -114,6 +114,14 @@ a:hover { color: var(--color-primary-600); }
                1px  1px 0 #fff;
 }
 
+html {
+    overflow: -moz-hidden-unscrollable;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
 /* Smooth page transitions */
 .fade-enter-active, .fade-leave-active { transition: opacity .6s ease; }
 .fade-enter-from, .fade-leave-to { opacity: 0; }

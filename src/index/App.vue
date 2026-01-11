@@ -4,6 +4,14 @@
     <!-- <title_nav /> -->
 
     <!-- {{ mobile }} -->
+
+    <div id = maintain class = 'align-content-center text-center' v-if = maintaining>
+        <v-icon size = x-large> fa-solid fa-clock-rotate-left fa-shake </v-icon>
+        <div style = 'font-weight: 100; font-size: 3em'> Homepage Redesign </div>
+        <b> 網站重構中，敬請期待:D </b> <br>
+        <i> Site redesign in progress... </i>
+        <legs />
+    </div>
     
     <v-main>
         <index_wallpaper />
@@ -23,6 +31,7 @@ import page_loader from '@/loader.vue'
 import site_footer from '@/footer.vue'
 import index_wallpaper from '@/index/wallpaper.vue'
 
+import legs from '@/event/animates/event.vue'
 import { useDisplay } from 'vuetify'
 
 export default {
@@ -43,14 +52,16 @@ export default {
                 }
             },
             mobile: useDisplay(),
-            video_play: false
+            video_play: false,
+            maintaining: false
         }
     },
     components: {
         title_nav,
         page_loader,
         site_footer,
-        index_wallpaper
+        index_wallpaper,
+        legs
     },
     mounted() {
         M.AutoInit();
@@ -60,6 +71,7 @@ export default {
         setTimeout(() => {
             this.loading = false;
         }, 100);
+        if(location.href.indexOf('ycbs.tw') != -1) this.maintaining = true;
     },
     methods: {
         submit() {
@@ -183,6 +195,13 @@ a.unfocused, a.unfocused:visited, a.unfocused:hover, a.unfocused:active {
 }
 .stext {
     font-size: 20px;
+}
+#maintain {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, .9);
+    backdrop-filter: blur(30px);
 }
 /* .v-card-text * {
     font-size: 20px;
