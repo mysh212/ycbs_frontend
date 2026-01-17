@@ -1,17 +1,17 @@
 <template>
   <v-app>
     <page_loader :loading = 'loading' />
-    <!-- <title_nav /> -->
+    <title_nav />
 
     <!-- {{ mobile }} -->
 
-    <div id = maintain class = 'align-content-center text-center' v-if = maintaining>
+    <!-- <div id = maintain class = 'align-content-center text-center' v-if = maintaining>
         <v-icon size = x-large> fa-solid fa-clock-rotate-left fa-shake </v-icon>
         <div style = 'font-weight: 100; font-size: 3em'> Homepage Redesign </div>
         <b> 網站重構中，敬請期待:D </b> <br>
         <i> Site redesign in progress... </i>
         <legs />
-    </div>
+    </div> -->
     
     <v-main>
         <index_wallpaper />
