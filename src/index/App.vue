@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <page_loader :loading = 'loading' />
-    <title_nav />
+    <!-- <title_nav /> -->
 
     <!-- {{ mobile }} -->
 
